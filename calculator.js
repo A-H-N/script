@@ -14,6 +14,31 @@ const calculate = (n1, operator, n2) => {
   return result
 }
 
+document.onkeydown = checkKey;
+ 
+function checkKey(e) {
+ 
+    e = e || window.event;
+    var logDiv = document.getElementById("log-div");
+     logDiv.innerHTML = "event.key= " + e.key +"<br/>"
+                             + "event.keyCode= "+ e.keyCode;
+ 
+    if (e.keyCode == '38') {
+        
+    }
+    else if (e.keyCode == '40') {
+        alert(' down arrow')
+    }
+    else if (e.keyCode == '37') {
+       alert(' left arrow')
+    }
+    else if (e.keyCode == '39') {
+      alert(' right arrow')
+     console.log()
+    }
+ 
+}
+
 const calculator = document.querySelector('.calculator')
 const display = calculator.querySelector('.calculator__display')
 const keys = calculator.querySelector('.calculator__keys')
