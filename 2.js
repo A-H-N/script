@@ -17,31 +17,6 @@ const calculator = document.querySelector('.calculator')
 const display = calculator.querySelector('.calculator__display')
 const keys = calculator.querySelector('.calculator__keys')
 
-document.onkeydown = checkKey;
- 
-function checkKey(e) {
- 
-    e = e || window.event;
-    var logDiv = document.getElementById("log-div");
-     logDiv.innerHTML = "event.key= " + e.key +"<br/>"
-                             + "event.keyCode= "+ e.keyCode;
- 
-    if (e.keyCode == '38') {
-        
-    }
-    else if (e.keyCode == '40') {
-        alert(' down arrow')
-    }
-    else if (e.keyCode == '37') {
-       alert(' left arrow')
-    }
-    else if (e.keyCode == '39') {
-      
-     console.log(keys)
-    }
- 
-}
-
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
     const key = e.target
