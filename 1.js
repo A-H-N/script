@@ -19,7 +19,9 @@ const display = calculator.querySelector('.calculator__display')
 const keys = calculator.querySelector('.calculator__keys')
 
 keys.addEventListener('click', e => {
+  console.log( e.target)
   if (e.target.matches('button')) {
+    
     const key = e.target
     const action = key.dataset.action
     const keyContent = key.textContent
@@ -47,6 +49,7 @@ keys.addEventListener('click', e => {
       action === 'multiply' ||
       action === 'divide'
     ) {
+      
       console.log('operator key!')
       key.classList.add('is-depressed')
       calculator.dataset.previousKeyType = 'operator'
@@ -55,7 +58,7 @@ keys.addEventListener('click', e => {
     }
 
     if (action === 'clear') {
-      console.log('clear key!')
+      console.log('clear key!')// hihi
     }
 
     if (action === 'calculate') {
